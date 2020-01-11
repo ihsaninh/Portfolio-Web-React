@@ -13,8 +13,32 @@ import './Navbar.css';
 
 const NavbarApp = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggle = () => setIsOpen(!isOpen);
+
+  const navItems = [{
+    href: '/components/',
+    title: 'HOME',
+    classItem: 'navitem',
+    classLink: 'active',
+  }, {
+    href: '/components/',
+    title: 'SERVICES',
+    classItem: 'navitem',
+    classLink: 'navlinknormal',
+  }, {
+    href: '/components/',
+    title: 'PORTFOLIO',
+    classItem: 'navitem',
+    classLink: 'navlinknormal',
+  }, {
+    href: '/components/',
+    title: 'CONTACT US',
+    classItem: 'navitem',
+    classLink: 'navlinknormal',
+  }];
+
+
 
   return (
     <div className="App">
@@ -23,18 +47,11 @@ const NavbarApp = () => {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto navlink" navbar>
-              <NavItem className="navitem">
-                <NavLink className="active" href="/components/">HOME</NavLink>
+            {navItems.map((item, index ) => (
+              <NavItem className={item.classItem} key={index}>
+                <NavLink className={item.classLink} href={item.href}>{item.title}</NavLink>
               </NavItem>
-              <NavItem className="navitem">
-                <NavLink className="navlinknormal" href="/components/">SERVICES</NavLink> 
-              </NavItem>
-              <NavItem className="navitem">
-                <NavLink className="navlinknormal" href="/components/">PORTFOLIO</NavLink> 
-              </NavItem>
-              <NavItem className="navitem">
-                <NavLink className="navlinknormal" href="/components/">CONTACT US</NavLink> 
-              </NavItem>
+            ))}
             </Nav>
           </Collapse>
         </Container>
