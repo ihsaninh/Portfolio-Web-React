@@ -2,6 +2,7 @@ import React from 'react';
 
 import { NavbarApp } from './Components/Navbar/Navbar';
 import { JumbotronComponent } from './Components/Jumbotron/Jumbotron';
+import { Features } from './Components/Features/Features';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
        role="Frontend Developer"
        description="I Like Frontend programming on Web or Mobile"
      />
+     <Features />
     </div>
   );
 }
