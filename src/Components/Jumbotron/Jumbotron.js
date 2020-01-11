@@ -5,6 +5,7 @@ import './Jumbotron.css';
 import BannerJumbotron from '../../Assets/Images/BannerJumbotron.png';
 
 const JumbotronComponent = props => {
+  const { author, role, description } = props;
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -17,9 +18,9 @@ const JumbotronComponent = props => {
         <Container>
           <div className="jumbotron-content">
             <div className="jumbotron-info">
-              <h1 className="display-3"><h1 className="hello-text">Hello</h1>, im David Otong Maulana</h1>
-              <p className="lead">FRONTEND DEVELOPER</p>
-              <p className="jumbotron-desc">I Like Frontend programming on Web or Mobile</p>
+              <h1 className="display-3"><h1 className="hello-text">Hello</h1>, im {author}</h1>
+              <p className="lead">{role}</p>
+              <p className="jumbotron-desc">{description}</p>
               <p className="lead">
                 <Button onClick={handleClick} className="btn-one">Hire Me</Button>
                 <Button onClick={handleClick} className="btn-two">Get CV</Button>

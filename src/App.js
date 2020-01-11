@@ -1,14 +1,18 @@
-import React,  { Fragment } from 'react';
+import React from 'react';
 
 import { NavbarApp } from './Components/Navbar/Navbar';
 import { JumbotronComponent } from './Components/Jumbotron/Jumbotron';
 
 const App = () => {
   return (
-    <Fragment>
+    <div>
      <NavbarApp />
-     <JumbotronComponent />
-    </Fragment>
+     <JumbotronComponent 
+       author="Ihsan Nurul Habib"
+       role="Frontend Developer"
+       description="I Like Frontend programming on Web or Mobile"
+     />
+    </div>
   );
 }
 
