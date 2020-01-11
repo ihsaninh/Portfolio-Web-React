@@ -13,29 +13,21 @@ import './Navbar.css';
 
 const NavbarApp = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const toggle = () => setIsOpen(!isOpen);
 
   const navItems = [{
-    href: '/components/',
+    href: '/',
     title: 'HOME',
-    classItem: 'navitem',
-    classLink: 'active',
   }, {
-    href: '/components/',
+    href: '/services/',
     title: 'SERVICES',
-    classItem: 'navitem',
-    classLink: 'navlinknormal',
   }, {
-    href: '/components/',
+    href: '/portfolio/',
     title: 'PORTFOLIO',
-    classItem: 'navitem',
-    classLink: 'navlinknormal',
   }, {
-    href: '/components/',
+    href: '/cons/',
     title: 'CONTACT US',
-    classItem: 'navitem',
-    classLink: 'navlinknormal',
   }];
 
 
@@ -48,8 +40,8 @@ const NavbarApp = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto navlink" navbar>
             {navItems.map((item, index ) => (
-              <NavItem className={item.classItem} key={index}>
-                <NavLink className={item.classLink} href={item.href}>{item.title}</NavLink>
+              <NavItem className="navitem" key={index}>
+                <NavLink className={item.title === 'HOME' ? 'active' : 'navlinknormal'} href={item.href}>{item.title}</NavLink>
               </NavItem>
             ))}
             </Nav>

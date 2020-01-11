@@ -16,7 +16,7 @@ const Features = props => {
     <div className="features-container" style={bgStyle}>  
       <h6 className="features-title">WHAT DO WE PROVIDE</h6>
       <Row>
-        <Col xs="6">.col-6</Col>
+        <Col xs="6"></Col>
       </Row>
     </div>
   )
