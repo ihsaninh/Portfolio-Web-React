@@ -9,7 +9,7 @@ import {
   NavLink,
 } from 'reactstrap';
 
-import './Navbar.css';
+import './Navbar.sass';
 
 const NavbarApp = () => {
   const [isOpen, setIsOpen] = useState(false);
