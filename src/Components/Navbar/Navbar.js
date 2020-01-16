@@ -30,8 +30,6 @@ const NavbarApp = () => {
     title: 'CONTACT US',
   }];
 
-
-
   return (
     <div className="App">
       <Navbar light expand="md" className="navbar">
@@ -39,9 +37,12 @@ const NavbarApp = () => {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto navlink" navbar>
-            {navItems.map((item, index ) => (
+            {navItems.map((item, index) => (
               <NavItem className="navitem" key={index}>
-                <NavLink className={item.title === 'HOME' ? 'active' : 'navlinknormal'} href={item.href}>{item.title}</NavLink>
+                <NavLink 
+                  className={item.title === 'HOME' ? 'active' : 'navlinknormal'} 
+                  href={item.href}>{item.title}
+                </NavLink>
               </NavItem>
             ))}
             </Nav>

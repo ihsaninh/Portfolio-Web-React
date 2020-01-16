@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Jumbotron, Button, Container } from 'reactstrap';
 
-import './Jumbotron.css';
+import './Jumbotron.sass';
 import BannerJumbotron from '../../Assets/Images/BannerJumbotron.png';
 
 const JumbotronComponent = props => {

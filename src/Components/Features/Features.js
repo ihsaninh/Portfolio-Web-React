@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-import './Features.css'
+import './Features.sass'
 import waveBg from '../../Assets/Images/wave.svg';
 
 const Features = props => {
